@@ -2,7 +2,6 @@ package br.com.digitalhouse;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class DigitalHouseManager {
     //Attributes
@@ -40,11 +39,6 @@ public class DigitalHouseManager {
     public void consultarCurso(Integer codigoAluno) {
 
     }
-
-    Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o código: ");
-    int numEscolhido = scanner.nextInt();
-
 
 
 }
