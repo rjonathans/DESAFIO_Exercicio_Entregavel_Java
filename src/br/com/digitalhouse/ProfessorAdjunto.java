@@ -25,11 +25,13 @@ public class ProfessorAdjunto extends Professor {
         this.horasMonitoria = horasMonitoria;
     }
 
-    //to String
     @Override
     public String toString() {
-        return "ProfessorAdjunto{" +
-                "horasMonitoria=" + horasMonitoria +
-                '}';
+        return  "\nNome: " + getNome() +
+                "\nSobrenome: " + getSobrenome() +
+                "\nTempo de Casa: " + getTempoDeCasa() +
+                "\nCod de Professor: " + getCodDeProfessor() +
+                "\nHoras de monitoria: " + getHorasMonitoria();
     }
+
 }

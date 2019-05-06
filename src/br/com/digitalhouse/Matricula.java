@@ -49,10 +49,9 @@ public class Matricula {
     //To String
     @Override
     public String toString() {
-        return "Matricula{" +
-                "aluno=" + aluno +
-                ", curso=" + curso +
-                ", dataMatricula=" + dataMatricula +
-                '}';
+        return "\n>>MATRICULA" +
+                "\naluno: " + aluno +
+                "\nCurso: " + curso +
+                "\nDataMatricula: " + dataMatricula;
     }
 }

@@ -46,10 +46,10 @@ public class Aluno {
 
     @Override
     public String toString() {
-        return "Aluno{" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", codDeAluno=" + codDeAluno +
-                '}';
+        return "\n>>ALUNO" +
+                "\nNome: " + nome +
+                "\nSobrenome: " + sobrenome +
+                "\nCodDeAluno: " + codDeAluno + "\n";
     }
+
 }

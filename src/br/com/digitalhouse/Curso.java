@@ -1,5 +1,7 @@
 package br.com.digitalhouse;
 
+import java.util.List;
+
 public class Curso {
     //Attributes
     private String nome;
@@ -7,25 +9,36 @@ public class Curso {
     private ProfessorTitular professorTitular;
     private ProfessorAdjunto professorAdjunto;
     private Integer qtdMaximaAlunos;
+    private List<Aluno> alunos;
 
     //Constructor
-    public Curso(String nome, Integer codCurso, ProfessorTitular professorTitular, ProfessorAdjunto professorAdjunto, Integer qtdMaximaAlunos) {
+
+
+    public Curso() {
+    }
+
+    public Curso(String nome, Integer codigoCurso, ProfessorTitular professorTitular, ProfessorAdjunto professorAdjunto, Integer qtdMaximaAlunos) {
         this.nome = nome;
-        this.codigoCurso = codCurso;
+        this.codigoCurso = codigoCurso;
         this.professorTitular = professorTitular;
         this.professorAdjunto = professorAdjunto;
         this.qtdMaximaAlunos = qtdMaximaAlunos;
     }
 
-    //Empty Constructor
-    public Curso() {
-    }
-
     //Methods
-    public boolean adicionarUmAluno();{
+    public void adicionarUmAluno(Aluno aluno) {
+        if (alunos.contains(aluno)){
+            System.out.println("Este aluno já foi cadastrado!");
+        } else {
+            this.alunos.add(aluno);
+            System.out.println("Aluno "+aluno+" cadastrado com sucesso!");
+        }
+
+        this.alunos.add(aluno);
 
     }
-    public void excluirAluno();{
+
+    public void excluirAluno() {
 
     }
 
@@ -36,14 +49,6 @@ public class Curso {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Integer getCodCurso() {
-        return codigoCurso;
-    }
-
-    public void setCodCurso(Integer codCurso) {
-        this.codigoCurso = codCurso;
     }
 
     public ProfessorTitular getProfessorTitular() {
@@ -70,15 +75,29 @@ public class Curso {
         this.qtdMaximaAlunos = qtdMaximaAlunos;
     }
 
+    public List<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(List<Aluno> alunos) {
+        this.alunos = alunos;
+    }
+
+    public Integer getCodigoCurso() {
+        return codigoCurso;
+    }
+
+    public void setCodigoCurso(Integer codigoCurso) {
+        this.codigoCurso = codigoCurso;
+    }
+
     //To String
     @Override
     public String toString() {
-        return "Curso{" +
-                "nome='" + nome + '\'' +
-                ", codCurso=" + codigoCurso +
-                ", professorTitular=" + professorTitular +
-                ", professorAdjunto=" + professorAdjunto +
-                ", qtdMaximaAlunos=" + qtdMaximaAlunos +
-                '}';
+        return ">>CURSO: " + nome +
+                "\nCodigo do Curso: " + codigoCurso + "\n" +
+                "\n>>PROFESSOR TITULAR " + professorTitular + "\n" +
+                "\n>>PROFESSOR ADJUNTO " + professorAdjunto + "\n" +
+                "\n>>QTD. Máxima Alunos: " + qtdMaximaAlunos + "\n";
     }
 }
