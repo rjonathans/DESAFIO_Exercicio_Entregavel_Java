@@ -10,7 +10,6 @@ public class Principal {
 
 
         DigitalHouseManager dhm = new DigitalHouseManager();
-        Curso c1 = new Curso();
         Matricula m1 = new Matricula();
 
         ProfessorTitular tairo = new ProfessorTitular("Tairo","Miguel",10,101,"Mobile");
@@ -48,7 +47,7 @@ public class Principal {
         dhm.registrarAluno(andreza);
         dhm.registrarAluno(ana);
 
-        c1.adicionarUmAluno(robson);
+        mobile.adicionarUmAluno(robson);
 
 
         /*Scanner scanner = new Scanner(System.in);

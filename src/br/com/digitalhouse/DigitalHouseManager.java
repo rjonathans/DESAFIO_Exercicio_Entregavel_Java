@@ -10,7 +10,7 @@ public class DigitalHouseManager {
     private List<Matricula> matriculas = new ArrayList<>();
     private List<Curso> cursos = new ArrayList<>();
 
-    //Methods
+        //Methods
     public void registrarCurso(Curso curso) {
         this.getCursos().add(curso);
         System.out.println("REGISTRANDO....\n" + curso + "\nCURSO REGISTRADO COM SUCESSO.\n"+"\n*****************\n");
