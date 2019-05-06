@@ -33,13 +33,20 @@ public class Curso {
             this.alunos.add(aluno);
             System.out.println("Aluno "+aluno+" cadastrado com sucesso!");
         }
-
         this.alunos.add(aluno);
 
     }
 
-    public void excluirAluno() {
+    public void excluirAluno(Aluno aluno) {
+        {
+            if (alunos.contains(aluno)){
+                System.out.println("Este aluno já foi cadastrado!");
+            } else {
+                this.alunos.remove(aluno);
+                System.out.println("Aluno "+aluno+" cadastrado com sucesso!");
+            }
 
+        }
     }
 
     //Getters and setters
@@ -100,4 +107,30 @@ public class Curso {
                 "\n>>PROFESSOR ADJUNTO " + professorAdjunto + "\n" +
                 "\n>>QTD. Máxima Alunos: " + qtdMaximaAlunos + "\n";
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((codigoCurso == null) ? 0 : codigoCurso.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Curso other = (Curso) obj;
+        if (codigoCurso == null) {
+            if (other.codigoCurso != null)
+                return false;
+        } else if (!codigoCurso.equals(other.codigoCurso))
+            return false;
+        return true;
+    }
+
 }
